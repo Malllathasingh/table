@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 350px;
+            height: 300px;
+            margin-top: 30px;
+            border: 1px solid black;
+        }
+        body {
+    text-align: center;
+    padding: 20px;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+}
+
+#result {
+    margin-top: 20px;
+}
+    </style>
+</head>
+<body>
+    <center>
+        <br>
+        <br>
+    <div>
+        <br>
+        <br>
+    <input type="text" id="mobileNumber" placeholder="Enter mobile number">
+    <br>
+    <br>
+    <button onclick="validateMobileNumber()">Get Result</button>
+    <p id="result"></p>
+    </div>
+    </center>
+    <script>
+        function validateMobileNumber() {
+    var mobileNumber = document.getElementById("mobileNumber").value;
+
+    
+    if (!/^\d+$/.test(mobileNumber)) {
+        displayResult("Invalid mobile number.");
+        return;
+    }
+
+    
+    if (mobileNumber.length !== 10) {
+        displayResult("Invalid mobile number.");
+        return;
+    }
+
+    
+    var validCountryCodes = ["+91"];
+    var startsWithValidCode = validCountryCodes.some(function(code) {
+        return mobileNumber.startsWith(code);
+    });
+    if (!startsWithValidCode) {
+        displayResult("Invalid mobile number.");
+        return;
+    }
+    displayResult("Valid mobile number!");
+     window.location.href = "https://C:\Users\DELL\Desktop";
+}
+
+function displayResult(message) {
+    document.getElementById("result").innerHTML = message;
+}
+
+    </script>
+</body>
+</html>

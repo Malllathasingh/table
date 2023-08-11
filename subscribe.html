@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+<input id="inp" type="button" onclick="SUBSCRIBE()" value="SUBSCRIBE" style="border: 50px;" style="border: 2px;" style="margin: 50px;">
+<p id="p"></p>
+    </center>
+    <script>
+        function SUBSCRIBE()
+        {
+            var x=document.getElementById('inp').value
+            if(x=="SUBSCRIBE")
+            {
+                document.getElementById('inp').setAttribute('value',"SUBSCRIBED")
+                document.getElementById('inp').style.backgroundColor="blue"
+                document.getElementById('p').innerHTML=" THANKS FOR YOUR SUBSCRIBING"
+            }
+            else if(x=="SUBSCRIBED")
+            {
+                document.getElementById('inp').setAttribute('value',"SUBSCRIBE")
+                document.getElementById('inp').style.backgroundColor="red" 
+                document.getElementById('p').innerHTML=""
+            }
+        }
+    </script>
+</body>
+</html>

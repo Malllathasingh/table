@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ecommerce </title>
+    <style>
+  .nav {
+        align-items: center;
+        gap: 15px;
+        justify-content: flex-end;
+        margin-bottom: 25px;
+        font-size: 17px;
+        font-family: Arial, Helvetica, sans-serif; 
+        padding-left: 15%;
+        margin-left: 20px;
+        margin-top: -7%;
+        color:  rgb(227, 29, 245);
+}
+.nav a:hover {
+  border: 2px solid rgb(227, 29, 245);
+  padding: 10px;
+  border-radius: 25px;
+}
+.active{
+      color: purple;
+      margin-top: -1%;
+      text-decoration:none;
+}
+
+#search{
+    height: 36px;
+    width: 403px;
+    border-radius: 4px;
+    border: 1px solid rgba(202, 199, 199, 0.801);
+    font-size: 15px;
+    background-color: rgb(238, 239, 240);
+    margin: auto;
+    color: purple;
+}
+#login{
+        height: 36px;
+        width: 155px;
+        border-radius: 5px;
+        outline: none;
+        border: 1px solid rgba(202, 199, 199, 0.801);
+        font-size: 18px;
+        background-color: white;
+        color:purple;
+        font-size: 19px;
+        font-style: bold;
+}
+#heading{
+text-align: left;
+color: purple;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  padding: 10px;
+}
+
+.grid-container > div {
+  text-align: center;
+  font-size: 30px;
+}
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 400px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+  
+</head>
+<body style="background-color: rgb(250, 219, 253);">
+    <center>
+        <h1 id="heading">E-COMMERCE</h1>
+        <br>
+        <br>
+    <div class="nav">
+        <input id="search" type="text" placeholder=" Search">&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="button" value="Login" id="login">&nbsp;&nbsp;
+        <a class="active"href="#home">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="active"href="#news">Shop</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="active"href="#contact">Contact Us</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="active"href="#donate now">Blog</a>
+      </div>
+      <div>
+        
+      </div>
+    <!-- grid-conatiner -->
+    <div class="grid-container">
+      <div> <!-- slideshow -->
+        <div class="slideshow-container">
+  
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="./download.jpg" style="width:100%">
+            <div class="text">Caption Text</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="./download1.jpg" style="width:100%">
+            <div class="text">Caption Two</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="./download.jpg" style="width:100%">
+            <div class="text">Caption Three</div>
+          </div>
+          
+          </div>
+          <br>
+          
+          <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+          </div></div>
+      <div> <!-- slideshow -->
+        <div class="slideshow-container">
+  
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="./download.jpg" style="width:100%">
+            <div class="text">Caption Text</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="./download1.jpg" style="width:100%">
+            <div class="text">Caption Two</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="./download.jpg" style="width:100%">
+            <div class="text">Caption Three</div>
+          </div>
+          
+          </div>
+          <br>
+          
+          <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+          </div></div>
+      <div> <!-- slideshow -->
+        <div class="slideshow-container">
+  
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="./download.jpg" style="width:100%">
+            <div class="text">Caption Text</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="./download1.jpg" style="width:100%">
+            <div class="text">Caption Two</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="./download.jpg" style="width:100%">
+            <div class="text">Caption Three</div>
+          </div>
+          
+          </div>
+          <br>
+          
+          <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+          </div></div>  
+      <div> <!-- slideshow -->
+        <div class="slideshow-container">
+  
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="./download.jpg" style="width:100%">
+            <div class="text">Caption Text</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="./download1.jpg" style="width:100%">
+            <div class="text">Caption Two</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="./download.jpg" style="width:100%">
+            <div class="text">Caption Three</div>
+          </div>
+          
+          </div>
+          <br>
+          
+          <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+          </div></div>
+     </div>
+      <!-- categories -->
+      <div></div>
+      
+    </center>
+    <script>
+      let slideIndex = 0;
+      showSlides();
+      
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+      </script>
+</body>
+</html>

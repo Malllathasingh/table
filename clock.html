@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 360px;
+            height: 300px;
+            background-color: darksalmon;
+            background-image: linear-gradient(black blue);
+            border: 1px solid black;
+            margin: 100px;
+            border-radius:100%;
+            box-shadow: 30px 30px 30px black;
+            position: relative;
+             }
+             #DAY{
+                top: 50px;
+                position: relative;
+                font-size: 50px;
+                
+             }
+             #DATE{
+                top: 50px;
+                position: relative;
+                font-size: medium;
+             }
+             #TIME{
+                top: 60px;
+                position: relative;
+                font-size: medium;
+             }
+    </style>
+</head>
+<body onload="tiktik()">
+    <center>
+    <div>
+        <h1 class="aa" id="DAY"></h1>
+        <h1 class="aa" id="DATE"></h1>
+        <p class="aa" id="TIME"></p>
+    </div>
+    </center>
+    <script>
+        function tiktik()
+        {
+        var timezone=new Date()
+        var day=timezone.getDay()
+        switch(day)
+        {
+            case 0:day="sunday";
+            break;
+            case 1:day="monday";
+            break;
+            case 2:day="tuesday";
+            break;
+            case 3:day="wednesday";
+            break;
+            case 4:day="thurdday";
+            break;
+            case 5:day="friday";
+            break;
+            case 6:day="saturday";
+            break;
+        }
+        document.getElementById('DAY').innerHTML=day
+
+        var dd=timezone.getDate()
+        var mon=timezone.getMonth()
+        var yyyy=timezone.getFullYear()
+        
+        switch(mon)
+        {
+            case 0:mon="jan";
+            break;
+            case 1:mon="feb";
+            break;
+            case 2:mon="mar";
+            break;
+            case 3:mon="apr";
+            break;
+            case 4:mon="may";
+            break;
+            case 5:mon="jun";
+            break;
+            case 6:mon="jul";
+            break;
+            case 7:mon="aug";
+            break
+            case 8:mon="sep";
+            break;
+            case 9:mon="oct";
+            break;
+            case 10:mon="nov";
+            break;
+            case 11:mon="dec";
+            break;
+        }
+        var date=dd+'-'+mon+'-'+'-'+yyyy
+        document.getElementById('DATE').innerHTML=date;
+    
+
+        var hh=timezone.getHours()
+        var min=timezone.getMinutes()
+        var ss=timezone.getSeconds()
+        var ampm=hh>=12?'pm':'am'
+        hh=hh%12
+        hh=hh?hh:12
+         min=min<10?'0'+min:min
+
+         
+        var time=hh+':'+min+':'+ss+''+ampm
+        document.getElementById('TIME').innerHTML=time;
+        setTimeout(function(){tiktik()})
+        }
+    </script>
+</body>
+</html>

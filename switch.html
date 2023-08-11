@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <select id="a">
+            <option>SELECT DAYS NAME</option>
+            <option>MONDAY</option>
+            <option>TUESDAY</option>
+            <option>WEDNESDAY</option>
+            <option>THUSDAY</option>
+            <option>FRIDAY</option>
+            <option>SATURDAY</option>
+            <option>SUNDAY</option>
+        </select>
+        <br>
+        <br>
+        <input id="inp" value="SELECT YOUR DAYS" type="button" onclick="varam()">
+        <P id="pri"></P>
+        <script>
+            function varam()
+            {
+                var x=document.getElementById('a').value
+                switch(x)
+                {
+                    case 'MONDAY':document.getElementById('pri').innerHTML="latha";
+                    break;
+                    case 'TUESDAY':document.getElementById('pri').innerHTML="tharuni";
+                    break;
+                    case 'WEDNESDAY':document.getElementById('pri').innerHTML="tuba";
+                    break;
+                    case 'THURSDAY':document.getElementById('pri').innerHTML="siri";
+                    break;
+                    case 'FRIDAY':document.getElementById('pri').innerHTML="poonam";
+                    break;
+                    case 'SATURDAY':document.getElementById('pri').innerHTML="harsha";
+                    break;
+                    default:document.getElementById('pri').innerHTML="FUNDAY";
+                    break;
+                }
+            }
+        </script>
+        </center>
+</body>
+</html>

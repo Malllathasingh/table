@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.61/dist/ccs/bootstrao.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/propper.js@1.16.1/dist/umd/propper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+    body{
+        scroll-behavior: smooth;
+        overflow: auto;
+        height: 500px;
+      }
+      header{
+        width: 100%;
+        height: 110vh;
+        background:linear-gradient(rgba(0,0,0,0.8),rgba(39, 27, 27, 0.8)),url(./../Downloads/pic1.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+      }
+      nav{
+        width: 100%;
+        height: 70px;
+        background: white;
+        color: black;
+        display: flex;
+       justify-content: space-between;
+       text-align: center;
+       padding: 0%;
+     
+      
+      }
+      
+      .logo{
+        font-family: sans-serif;
+        font-size: 2em;
+      }
+      .logo span{
+        color: blue;
+      }
+      .manu a{
+        text-decoration: none;
+        color: black;
+        padding: 10px 20px;
+        font-family: sans-serif;
+        font-size: 20px;
+    
+      }
+      .manu a:hover{
+  border: 2px solid rgb(26, 5, 121);
+  padding: 10px;
+  border-radius: 25px;
+  margin-top:50px ;
+}
+      .h-text{
+        padding-left: 200px;
+        max-width: 700px;
+        top: 100px;
+        right: 60%;
+         text-align: center;
+        
+         width: 2000px;
+      }
+      .h-text h1{
+        font-size: larger;
+        color: white;
+        font-size: 3em;
+      }
+      .text input{
+        width: 90px;
+      border-radius:20px;
+      border: none;
+      outline: none;
+      font-size: 20px;
+      }
+      .h-text button{
+        width: 30px;
+        height: 20px;
+        background: #cca5a1;
+        border-radius: 10px;
+        text-align: justify;
+      }
+      #button{
+        width: 100px;
+        height: 30px;
+       
+      }
+      #result {
+    margin-top: 20px;
+    color: white;
+     }  
+    #MobileNumber{}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+        <div class="logo">
+            <span>Co</span>llege
+           <span>Na</span>me
+        </div>
+        <div class="manu">
+            <a href="a">Home</a>
+            <a  href="#">About</a>
+            <a  href="#">Gallery</a>
+            <a  href="#">Contact</a>
+        </div>
+        <br>
+        <br>
+        
+        </nav>
+        <br>
+        <section class="h-text">   
+          <h1 id="pupup">Here's to the Brightest <br>Future Ahead.......</h1>
+            <input id="MobileNumber" type="text"  placeholder="Mobile Number......" style="width: 290px; height:30px;font-size:large;border-radius: 10px;border-color:blue ;">
+            <br>
+            <br>
+            <br>
+            <br>
+            <button id="button" onclick="validateMobileNumber()">Get Results</button>
+            <p id="result"></p>
+        
+        </section>
+      
+    </header>
+    <script>
+        function validateMobileNumber() {
+    var MobileNumber = document.getElementById("MobileNumber").value;
+
+    
+    if (!/^\d+$/.test(MobileNumber)) {
+        displayResult("Invalid mobile number.");
+        return;
+    }
+
+    
+    if (MobileNumber.length !== 10) {
+        displayResult("Invalid mobile number.");
+        return;
+    }
+
+    
+    var validCountryCodes = ["+91"];
+    var startsWithValidCode = validCountryCodes.some(function(code) {
+        return obileNumber.startsWith(code);
+    });
+    if (!startsWithValidCode) {
+        displayResult("Invalid mobile number.");
+        return;
+    }
+    displayResult("Valid mobile number!");
+     window.location.href = "https://C:\Users\DELL\Desktop\table2.html";
+}
+
+function displayResult(message) {
+    document.getElementById("result").innerHTML = message;
+}
+
+    </script>
+    
+</body>
+</html>

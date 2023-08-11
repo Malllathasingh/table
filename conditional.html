@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    #inp{
+        background-color: rgb(79, 42, 165);
+        border: 1px solid black;
+    }
+   </style>
+</head>
+<body>
+    <center>
+    <select id="a">
+        <option>SELECT DAYS FOR FOOD</option>
+        <option>MONDAY</option>
+        <option>TUESDAY</option>
+        <option>WEDNESDAY</option>
+        <option>THUSDAY</option>
+        <option>FRIDAY</option>
+        <option>SATURDAY</option>
+        <option>SUNDAY</option>
+    </select>
+    <br>
+    <br>
+    <input id="inp" value="SELECT TODAY'S FOOD" type="button" onclick="karama()">
+    <P id="pri"></P>
+    <script>
+        function karama()
+        {
+            var x=document.getElementById('a').value
+            if(x=='SUNDAY'|| x=='MONDAY')
+            {
+                document.getElementById('pri').innerHTML="chicken";
+            }
+            else if(x=='WEDNESDAY')
+            {
+                document.getElementById('pri').innerHTML="MASALA" ;
+            }
+            else if(x=='TUESDAY')
+            {
+                document.getElementById('pri').innerHTML="LADDU" ;
+            }
+            else if(x=='WEDNESDAY')
+            {
+                document.getElementById('pri').innerHTML="KURRA" ;
+            }
+            else if(x=='THURSDAY')
+            {
+                document.getElementById('pri').innerHTML="ANNAM" ;
+            }
+            else if(x=='FRIDAY')
+            {
+                document.getElementById('pri').innerHTML="CURD" 
+            }
+        }
+    </script>
+    </center>
+</body>
+</html>
